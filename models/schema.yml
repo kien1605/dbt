@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: airbyte_schema
+    description: "Raw data from Airbyte"
+    tables:
+      - name: taxonomy_term_field_data
+        description: "Raw taxonomy terms"
+
+models:
+  - name: taxonomy_age_ranges
+    description: "Filtered and formatted age ranges"
+    columns:
+      - name: term_id
+        type: integer
+        description: "Term ID"
+      - name: age_range_title
+        type: string
+        description: "Age range title"
+      - name: updated_at
+        type: timestamp
+        description: "Updated timestamp"
+      - name: created_at
+        type: timestamp
+        description: "Created timestamp"
